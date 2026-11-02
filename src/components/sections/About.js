@@ -1,4 +1,4 @@
-import { Code2, Sparkles, Target } from 'lucide-react';
+import { BriefcaseBusiness, GraduationCap, Laptop } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Card from '@/components/ui/Card';
 
@@ -8,19 +8,19 @@ import Card from '@/components/ui/Card';
 export default function About() {
   const highlights = [
     {
-      icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and well-documented code is my priority.",
+      icon: GraduationCap,
+      title: "Finance & Banking",
+      description: "Studying business and finance at Government College of Commerce.",
     },
     {
-      icon: Sparkles,
-      title: "Modern Tech",
-      description: "Staying updated with latest technologies and best practices in web development.",
+      icon: BriefcaseBusiness,
+      title: "Team Operations",
+      description: "Building practical experience as a team member at KFC Bangladesh.",
     },
     {
-      icon: Target,
-      title: "Problem Solver",
-      description: "Passionate about solving complex problems with elegant solutions.",
+      icon: Laptop,
+      title: "Digital Projects",
+      description: "Exploring web development through independent projects.",
     },
   ];
 
@@ -36,18 +36,16 @@ export default function About() {
           {/* Main Description */}
           <div className="text-center space-y-4">
             <p className="text-lg text-foreground-secondary leading-relaxed">
-              I&apos;m a passionate full stack developer with a strong foundation in modern web technologies.
-              I specialize in building responsive, user-centric applications using React, Next.js, and Node.js.
+              I&apos;m a Finance and Banking student building a foundation in
+              business, finance, and practical team operations.
             </p>
             <p className="text-lg text-foreground-secondary leading-relaxed">
-              With experience in both frontend and backend development, I enjoy creating end-to-end solutions
-              that are not only functional but also deliver exceptional user experiences. I&apos;m constantly learning
-              and exploring new technologies to stay ahead in this ever-evolving field.
+              Alongside my studies, I work as a team member at KFC Bangladesh
+              and explore web development through personal projects.
             </p>
             <p className="text-lg text-foreground-secondary leading-relaxed">
-              Currently seeking opportunities to contribute to innovative projects and collaborate with talented
-              teams. I&apos;m particularly interested in roles that challenge me to grow as a developer and make a
-              meaningful impact.
+              I&apos;m interested in entry-level opportunities where I can
+              contribute, learn, and grow.
             </p>
           </div>
 
@@ -73,22 +71,6 @@ export default function About() {
             })}
           </div>
 
-          {/* Fun Facts or Interests */}
-          <div className="pt-8">
-            <h3 className="text-2xl font-semibold text-center text-foreground mb-6">
-              When I&apos;m Not Coding
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {['Open Source', 'Tech Blogs', 'Hackathons', 'Teaching', 'Gaming'].map((interest, index) => (
-                <span
-                  key={index}
-                  className="px-6 py-3 bg-background-tertiary border border-border-primary rounded-full text-foreground-secondary hover:text-accent-primary hover:border-accent-primary transition-all duration-200"
-                >
-                  {interest}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

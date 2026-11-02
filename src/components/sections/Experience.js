@@ -8,61 +8,17 @@ import Card from '@/components/ui/Card';
 export default function Experience() {
   const experiences = [
     {
-      title: "Frontend Developer Intern",
-      company: "Tech Company Name",
-      location: "City, State",
-      period: "Jun 2023 - Aug 2023",
-      type: "Internship",
+      title: "Team Member",
+      company: "KFC Bangladesh",
+      location: "Chattogram, Bangladesh",
+      period: "August 2025 — August 2026",
+      type: "Current role",
       responsibilities: [
-        "Developed responsive web applications using React and Next.js",
-        "Collaborated with design team to implement UI/UX improvements",
-        "Optimized application performance, reducing load time by 40%",
-        "Participated in code reviews and agile development processes",
+        "Support daily operations and prepare documentation and reports.",
+        "Help coordinate with team members and maintain official records.",
       ],
-      technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      title: "Web Development Volunteer",
-      company: "Non-Profit Organization",
-      location: "Remote",
-      period: "Jan 2023 - May 2023",
-      type: "Volunteer",
-      responsibilities: [
-        "Built and maintained the organization's website using modern web technologies",
-        "Implemented donation system and event registration features",
-        "Trained staff members on content management system",
-        "Increased website traffic by 60% through SEO optimization",
-      ],
-      technologies: ["WordPress", "JavaScript", "PHP", "MySQL"],
-    },
-    {
-      title: "Teaching Assistant - Web Development",
-      company: "University Name",
-      location: "City, State",
-      period: "Sep 2022 - Dec 2022",
-      type: "Part-time",
-      responsibilities: [
-        "Assisted professor in teaching Web Development course to 50+ students",
-        "Conducted weekly lab sessions and office hours",
-        "Graded assignments and provided constructive feedback",
-        "Developed supplementary learning materials and coding exercises",
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
     },
   ];
-
-  const getTypeColor = (type) => {
-    switch (type) {
-      case 'Internship':
-        return 'bg-accent-primary/10 text-accent-primary';
-      case 'Volunteer':
-        return 'bg-success/10 text-success';
-      case 'Part-time':
-        return 'bg-warning/10 text-warning';
-      default:
-        return 'bg-foreground-tertiary/10 text-foreground-tertiary';
-    }
-  };
 
   return (
     <section id="experience" className="section bg-background-secondary">
@@ -95,7 +51,7 @@ export default function Experience() {
                       <h3 className="text-2xl font-bold text-foreground">
                         {exp.title}
                       </h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(exp.type)}`}>
+                      <span className="px-3 py-1 rounded-full text-xs font-semibold bg-accent-primary/10 text-accent-primary">
                         {exp.type}
                       </span>
                     </div>
@@ -129,17 +85,6 @@ export default function Experience() {
                     </ul>
                   </div>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-background-tertiary border border-border-primary rounded text-sm text-foreground-secondary"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </Card>

@@ -1,23 +1,19 @@
-// Site-wide constants and configuration
-
 export const SITE_CONFIG = {
-  name: "Your Name",
-  title: "Full Stack Developer",
-  description: "Passionate developer specializing in web technologies and modern frameworks.",
-  url: "https://yourportfolio.vercel.app",
-  email: "your.email@example.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  twitter: "https://twitter.com/yourusername",
+  name: "Sumon Tripura",
+  title: "BBA Student · Finance & Banking",
+  description:
+    "Finance and Banking student, KFC Bangladesh team member, and curious web project builder.",
+  email: "stripura695@gmail.com",
+  github: "https://github.com/stripura695-sudo",
+  linkedin: "https://linkedin.com/in/sumon-tripura-8170123ba",
 };
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
 ];
 
 export const RESUME_URL = "/resume.pdf";

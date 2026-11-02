@@ -44,15 +44,11 @@ export function scrollToSection(id) {
 export function getInitialTheme() {
   if (typeof window !== 'undefined') {
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
+    if (storedTheme === 'light' || storedTheme === 'dark') {
       return storedTheme;
     }
-    
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
   }
-  return 'dark'; // Default theme
+  return 'dark';
 }
 
 /**

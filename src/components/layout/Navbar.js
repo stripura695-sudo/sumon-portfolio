@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from '@/components/ui/ThemeToggle';
-import { NAV_LINKS } from '@/data/constants';
+import { NAV_LINKS, SITE_CONFIG } from '@/data/constants';
 import { scrollToSection } from '@/lib/utils';
 
 /**
@@ -44,11 +44,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a
-            href="#hero"
-            onClick={(e) => handleNavClick(e, '#hero')}
+            href="#home"
+            onClick={(e) => handleNavClick(e, '#home')}
             className="text-xl md:text-2xl font-bold text-foreground hover:text-accent-primary transition-colors duration-200"
           >
-            {"<YourName />"}
+            {SITE_CONFIG.name}
           </a>
 
           {/* Desktop Navigation */}
