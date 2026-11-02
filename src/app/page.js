@@ -9,6 +9,7 @@ import {
   Mail,
   MapPin,
 } from 'lucide-react';
+import Image from 'next/image';
 import { NAV_LINKS, RESUME_URL, SITE_CONFIG } from '@/data/constants';
 import { PROJECTS_DATA } from '@/data/projects';
 import { SKILLS_DATA } from '@/data/skills';
@@ -181,9 +182,14 @@ export default function Home() {
                 <span className="profile-kicker">A LITTLE ABOUT ME</span>
                 <span className="profile-stamp">ST.</span>
               </div>
-              <div className="profile-monogram" aria-hidden="true">
-                <span>S</span>
-                <span>T</span>
+              <div className="profile-photo">
+                <Image
+                  src="/profile.png"
+                  alt="Sumon Tripura"
+                  width={768}
+                  height={1024}
+                  priority
+                />
               </div>
               <div className="profile-card-bottom">
                 <div>
