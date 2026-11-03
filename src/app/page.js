@@ -15,6 +15,7 @@ import { PROJECTS_DATA } from '@/data/projects';
 import { SKILLS_DATA } from '@/data/skills';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import MobileNav from '@/components/layout/MobileNav';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const education = [
   {
@@ -49,9 +50,9 @@ const experience = {
   ],
 };
 
-function SectionTitle({ eyebrow, title, description }) {
+function SectionTitle({ eyebrow, title, description, ...props }) {
   return (
-    <div className="section-title">
+    <div className="section-title" {...props}>
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       {description && <p className="section-description">{description}</p>}
@@ -102,6 +103,7 @@ function ProjectPreview({ kind }) {
 export default function Home() {
   return (
     <>
+      <ScrollReveal />
       <header className="site-header">
         <div className="nav-shell">
           <a className="brand" href="#home" aria-label="Sumon Tripura, home">
@@ -131,22 +133,22 @@ export default function Home() {
                 <span className="availability-dot" />
                 Open to entry-level opportunities
               </div>
-              <p className="hero-intro">Hello, I&apos;m</p>
-              <h1>
+              <p className="hero-intro hero-enter">Hello, I&apos;m</p>
+              <h1 className="hero-enter">
                 Sumon
                 <br />
                 <span>Tripura.</span>
               </h1>
-              <p className="hero-role">
+              <p className="hero-role hero-enter">
                 BBA student <span>·</span> Finance &amp; Banking
               </p>
-              <p className="hero-description">
+              <p className="hero-description hero-enter">
                 I&apos;m building a career at the intersection of business,
                 finance, and technology. Currently studying Finance and Banking
                 while gaining hands-on experience in team operations at KFC
                 Bangladesh.
               </p>
-              <div className="hero-actions">
+              <div className="hero-actions hero-enter">
                 <a className="button button-primary" href="#projects">
                   Explore my projects <ArrowDown size={16} />
                 </a>
@@ -154,7 +156,7 @@ export default function Home() {
                   <Download size={16} /> Download CV
                 </a>
               </div>
-              <div className="hero-socials">
+              <div className="hero-socials hero-enter">
                 <a
                   href={SITE_CONFIG.github}
                   target="_blank"
@@ -182,7 +184,7 @@ export default function Home() {
                 <span className="profile-kicker">A LITTLE ABOUT ME</span>
                 <span className="profile-stamp">ST.</span>
               </div>
-              <div className="profile-photo">
+              <div className="profile-photo hero-photo-enter">
                 <Image
                   src="/profile.png"
                   alt="Sumon Tripura"
@@ -213,10 +215,10 @@ export default function Home() {
         </section>
 
         <section className="about-section section-wrap" id="about">
-          <div className="about-heading">
+          <div className="about-heading" data-scroll-reveal>
             <SectionTitle eyebrow="01 / ABOUT" title="Grounded in business." />
           </div>
-          <div className="about-content">
+          <div className="about-content" data-scroll-reveal>
             <p className="about-lead">
               I&apos;m a Finance and Banking student who believes good work
               starts with curiosity, responsibility, and a willingness to
@@ -277,13 +279,18 @@ export default function Home() {
         <section className="projects-section" id="projects">
           <div className="section-wrap">
             <SectionTitle
+              data-scroll-reveal
               eyebrow="03 / SELECTED PROJECTS"
               title="Ideas made practical."
               description="Independent projects that let me explore web development and build useful experiences."
             />
             <div className="projects-grid">
               {PROJECTS_DATA.map((project, index) => (
-                <article className="project-card" key={project.id}>
+                <article
+                  className="project-card"
+                  data-scroll-reveal
+                  key={project.id}
+                >
                   <ProjectPreview kind={project.preview} />
                   <div className="project-content">
                     <div className="project-meta">
@@ -311,6 +318,7 @@ export default function Home() {
             </div>
             <a
               className="all-projects-link"
+              data-scroll-reveal
               href={SITE_CONFIG.github}
               target="_blank"
               rel="noreferrer"
@@ -322,13 +330,18 @@ export default function Home() {
 
         <section className="skills-section section-wrap" id="skills">
           <SectionTitle
+            data-scroll-reveal
             eyebrow="04 / SKILLS"
             title="What I bring."
             description="A growing mix of business knowledge, practical experience, and digital skills."
           />
           <div className="skills-grid">
             {Object.entries(SKILLS_DATA).map(([category, skills], index) => (
-              <article className="skill-card" key={category}>
+              <article
+                className="skill-card"
+                data-scroll-reveal
+                key={category}
+              >
                 <span className="skill-number">0{index + 1}</span>
                 <h3>{category}</h3>
                 <ul className="tag-list">
@@ -339,7 +352,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="languages-line">
+          <div className="languages-line" data-scroll-reveal>
             <span>LANGUAGES</span>
             <p>
               <strong>Bangla</strong> Native <i /> <strong>English</strong> Good

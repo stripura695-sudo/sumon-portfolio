@@ -1482,6 +1482,170 @@ a {
   }
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    translate: 0 16px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.availability {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 60ms both;
+}
+
+.hero-intro {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 120ms both;
+}
+
+.hero-copy h1 {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 180ms both;
+}
+
+.hero-role {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 240ms both;
+}
+
+.hero-description {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 300ms both;
+}
+
+.hero-actions {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 360ms both;
+}
+
+.hero-socials {
+  animation: fade-in-up 620ms cubic-bezier(0.2, 0.7, 0.2, 1) 420ms both;
+}
+
+.hero-photo-enter {
+  animation: fade-in 850ms ease-out 180ms both;
+}
+
+.nav-links a,
+.nav-contact {
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.nav-links a:hover,
+.nav-contact:hover {
+  transform: translateY(-1px);
+}
+
+.button {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.015);
+}
+
+.button:active {
+  transform: scale(0.985);
+}
+
+.scroll-reveal-ready [data-scroll-reveal] {
+  transition:
+    opacity 620ms ease,
+    translate 620ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.scroll-reveal-ready [data-scroll-reveal]:not(.is-revealed) {
+  opacity: 0;
+  translate: 0 18px;
+}
+
+.about-section > [data-scroll-reveal]:nth-child(2),
+.projects-grid [data-scroll-reveal]:nth-child(2),
+.skills-grid [data-scroll-reveal]:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.projects-grid [data-scroll-reveal]:nth-child(3),
+.skills-grid [data-scroll-reveal]:nth-child(3) {
+  transition-delay: 180ms;
+}
+
+.projects-grid [data-scroll-reveal]:nth-child(4),
+.skills-grid [data-scroll-reveal]:nth-child(4) {
+  transition-delay: 260ms;
+}
+
+.project-card {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
+}
+
+.restaurant-preview,
+.movie-preview {
+  transition: transform 280ms ease;
+}
+
+.project-card:hover .restaurant-preview,
+.project-card:hover .movie-preview {
+  transform: scale(1.025);
+}
+
+.project-content {
+  transition: transform 180ms ease;
+}
+
+.project-card:hover .project-content {
+  transform: translateY(-2px);
+}
+
+body,
+.site-header,
+.brand-mark,
+.theme-toggle,
+.hero-section,
+.profile-card,
+.about-content,
+.about-note,
+.experience-card,
+.projects-section,
+.project-content h3,
+.project-content > p,
+.project-meta,
+.skill-card,
+.skill-card h3,
+.education-section,
+.education-item,
+.education-copy h3,
+.contact-card,
+.contact-copy,
+.contact-details a,
+.site-footer {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1490,5 +1654,30 @@ a {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .scroll-reveal-ready [data-scroll-reveal] {
+    opacity: 1 !important;
+    translate: none !important;
+  }
+
+  .hero-enter,
+  .availability,
+  .hero-copy h1,
+  .hero-photo-enter {
+    animation: none !important;
+    opacity: 1 !important;
+    translate: none !important;
+  }
+
+  .nav-links a:hover,
+  .nav-contact:hover,
+  .button:hover,
+  .button:active,
+  .project-card:hover,
+  .project-card:hover .restaurant-preview,
+  .project-card:hover .movie-preview,
+  .project-card:hover .project-content {
+    transform: none !important;
   }
 }
